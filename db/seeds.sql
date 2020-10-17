@@ -1,0 +1,32 @@
+USE employee_db;
+
+INSERT INTO employee(first_name, last_name, role_id, manager_id) 
+VALUES 
+    ("John", "Smith", 2, null),
+    ("Frank", "Jones", 2, 1),
+    ("Kimberly", "Smith", 2, 1),
+    ("Adam", "Johnson", 3, 4),
+    ("Harold", "Allan", 3, 4),
+    ("Sarah", "Franklin", 4, null),
+    ("Kelly", "Thomas", 5, null),
+    ("Matthew", "Hanks", 6, 7),
+    ("Tracy", "Koch", 7, null);
+    
+
+INSERT INTO role(title, salary, department_id) 
+VALUES 
+    ("Sales Agent", 75000, 1),
+    ("Sales Lead", 100000, 1),
+    ("Software Engineer", 120000, 2),
+    ("Lead Engineer", 145000, 2),
+    ("Accountant", 75000, 3),
+    ("Attorney", 175000, 4),
+    ("Lead Attorney", 215000, 4);
+
+
+INSERT INTO department(name) 
+VALUES 
+    ("Sales"),
+    ("Engineering"),
+    ("Finance"),
+    ("Legal");
