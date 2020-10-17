@@ -1,16 +1,16 @@
 USE employee_db;
 
-INSERT INTO employee(first_name, last_name, role_id, manager_id) 
+INSERT INTO employee (first_name, last_name, role_id, manager_id, department_id)
 VALUES 
-    ("John", "Smith", 2, null),
-    ("Frank", "Jones", 2, 1),
-    ("Kimberly", "Smith", 2, 1),
-    ("Adam", "Johnson", 3, 4),
-    ("Harold", "Allan", 3, 4),
-    ("Sarah", "Franklin", 4, null),
-    ("Kelly", "Thomas", 5, null),
-    ("Matthew", "Hanks", 6, 7),
-    ("Tracy", "Koch", 7, null);
+    ("John", "Smith", 2, null, 1),
+    ("Frank", "Jones", 2, 1, 1),
+    ("Kimberly", "Smith", 2, 1, 1),
+    ("Adam", "Johnson", 3, 4, 2),
+    ("Harold", "Allan", 3, 4, 2),
+    ("Sarah", "Franklin", 4, null, 2),
+    ("Kelly", "Thomas", 5, null, 3),
+    ("Matthew", "Hanks", 6, 7, 4),
+    ("Tracy", "Koch", 7, null, 4);
     
 
 INSERT INTO role(title, salary, department_id) 
