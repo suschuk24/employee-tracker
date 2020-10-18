@@ -13,18 +13,18 @@ VALUES
     ("Tracy", "Koch", 7, null, 4);
     
 
-INSERT INTO role(title, salary, department_id) 
+INSERT INTO roles (title, salary, department_id) 
 VALUES 
-    ("Sales Agent", 75000, 1),
-    ("Sales Lead", 100000, 1),
-    ("Software Engineer", 120000, 2),
-    ("Lead Engineer", 145000, 2),
-    ("Accountant", 75000, 3),
-    ("Attorney", 175000, 4),
-    ("Lead Attorney", 215000, 4);
+    ("Sales Agent", 75000.00, 1),
+    ("Sales Lead", 100000.00, 1),
+    ("Software Engineer", 120000.00, 2),
+    ("Lead Engineer", 145000.00, 2),
+    ("Accountant", 75000.00, 3),
+    ("Attorney", 175000.00, 4),
+    ("Lead Attorney", 215000.00, 4);
 
 
-INSERT INTO department(name) 
+INSERT INTO department (name) 
 VALUES 
     ("Sales"),
     ("Engineering"),

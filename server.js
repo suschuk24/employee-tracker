@@ -20,17 +20,17 @@ function mainMenu() {
         {
             name: "main",
             type: "list",
-            message: " ",
-            choices: ["View all Departments", "View All Roles", "View All Employees", "Add a Department", "Add an Employee", "Update an Employee's Role", "Exit"]
+            message: "Please Select a Choice to start ",
+            choices: ["View All Departments","View All Roles","View All Employees","Add a Department","Add an Employee","Update an Employee's Role","Update Employee Managers","View Employees by Manager", "View Employees by Manager", "View Employees by Department", "Exit"]
         }
     ])
     .then(response => {
         console.log(response);
         switch(response.main) {
-            case "View all Departments":
+            case "View All Departments":
                 displayDepartments();
                 break;
-            case "View all Roles":
+            case "View All Roles":
                 displayRoles();
                 break;
             case "View All Employees":
@@ -44,6 +44,15 @@ function mainMenu() {
                 break;
             case "Update an Employee's Role":
                 updateRole();
+                break;
+            case "Update Employee Managers":
+                updateManager();
+                break;
+            case "View Employees by Manager": 
+                displayEmployeesbyManager();
+                break;
+            case "View Employees by Department": 
+                displayEmployeesbyDepartment();
                 break;
             case "Exit":
                 connection.end();
@@ -67,17 +76,17 @@ function displayDepartments() {
 };
 // Display Table of all roles
 function displayRoles() {
-    console.log("All employee roles are listed below:")
+    console.log("All Roles are listed below:")
     connection.query(
-        'SELECT * FROM role;', (err, res) => {
+        'SELECT * FROM roles', (err, res) => {
             if(err) throw err;
             console.table(res);
             mainMenu();
         }
-    
+
     );
-};
-// ZDisplay table of all employees
+}
+// Display table of all employees
 function displayEmployees() {
     console.log("All Employees are listed below:")
     connection.query(
@@ -195,3 +204,18 @@ function createRole(data) {
     );
     
 };
+
+// update an employee's manager
+function updateManager() {
+
+};
+
+// display employees by order of their manager
+function displayEmployeesbyManager() {
+
+}
+
+// display employees by order of their department
+function displayEmployeesbyDepartment() {
+
+}

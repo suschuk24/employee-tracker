@@ -3,7 +3,7 @@ const router = express.Router();
 
 // get all employee roles
 router.get('/role', (req, res) => {
-    const sql = `SELECT * FROM role`;
+    const sql = `SELECT * FROM roles`;
     const params = [];
   
     db.all(sql, params, (err, rows) => {
@@ -20,8 +20,8 @@ router.get('/role', (req, res) => {
   });
 
 // add a new role
-router.post('/role', (req, res) => {
-    const sql = `INSERT INTO role`;
+router.post('/roles', (req, res) => {
+    const sql = `INSERT INTO roles`;
     const params = [];
   
     db.all(sql, params, (err, rows) => {
@@ -38,7 +38,7 @@ router.post('/role', (req, res) => {
   });
 
 // update employees current role
-router.post('/api/role', (req, res) => {
+router.post('/roles', (req, res) => {
     const sql1 = `SELECT * FROM employee WHERE last_name = ?`;
     const params = [];
   
