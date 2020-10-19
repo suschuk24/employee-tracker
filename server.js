@@ -21,7 +21,7 @@ function mainMenu() {
             name: "main",
             type: "list",
             message: "Please Select a Choice to start ",
-            choices: ["View All Departments","View All Roles","View All Employees","Add a Department","Add an Employee","Update an Employee's Role","Update Employee Managers","View Employees by Manager", "View Employees by Manager", "View Employees by Department", "Exit"]
+            choices: ["View All Departments","View All Roles","View All Employees", "Add a Department", "Add an Employee", "Update an Employee's Role", "Exit"]
         }
     ])
     .then(response => {
@@ -44,15 +44,6 @@ function mainMenu() {
                 break;
             case "Update an Employee's Role":
                 updateRole();
-                break;
-            case "Update Employee Managers":
-                updateManager();
-                break;
-            case "View Employees by Manager": 
-                displayEmployeesbyManager();
-                break;
-            case "View Employees by Department": 
-                displayEmployeesbyDepartment();
                 break;
             case "Exit":
                 connection.end();
@@ -204,18 +195,3 @@ function createRole(data) {
     );
     
 };
-
-// update an employee's manager
-function updateManager() {
-
-};
-
-// display employees by order of their manager
-function displayEmployeesbyManager() {
-
-}
-
-// display employees by order of their department
-function displayEmployeesbyDepartment() {
-
-}
